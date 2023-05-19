@@ -3,6 +3,7 @@ Just a repo to keep important SQL commands to refer easily. Can be used on db-fi
 
 ## Schema SQL Commands
 ### These are commands to creat the schema
+
 create table tutorials_tbl(
    tutorial_id INT NOT NULL AUTO_INCREMENT,
    tutorial_title VARCHAR(100) NOT NULL,
@@ -48,20 +49,27 @@ INSERT INTO tcount_tbl
 (tutorial_author, tutorial_count) values ('Sanjay', 1);
 
 
-##Query SQL Commands
+## Query SQL Commands
 Select * from tutorials_tbl; 
+
 UPDATE tutorials_tbl SET tutorial_title = "Learn Java" where tutorial_id=3;
+
 Select * from tutorials_tbl;
+
 select * from tutorials_tbl WHERE tutorial_author = "Sanjay";
 
 Select * from tutorials_tbl where tutorial_author LIKE "%jay";
 
 select * from tutorials_tbl;
+
 select * from tcount_tbl;
+
 select * from tcount_tbl ORDER BY tutorial_author DESC;
+
 SELECT a.tutorial_id, a.tutorial_author, b.tutorial_count
  FROM tutorials_tbl a, tcount_tbl b
 WHERE a.tutorial_author = b.tutorial_author;
+
 Delete from tutorials_tbl where tutorial_id=3;
 
 SELECT tutorial_author,tutorial_count FROM tcount_tbl WHERE tutorial_author REGEXP '^S';
